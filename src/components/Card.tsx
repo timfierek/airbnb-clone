@@ -1,11 +1,10 @@
 import React from "react";
-import katieZaferes from "../images/katie-zaferes.png";
 import star from "../images/star.png";
 
-function Card() {
+function Card(props: any) {
     return (
         <div className="card">
-            <img src={katieZaferes} alt="" className="picture" />
+            <img src={props.img} alt="" className="picture" />
             <div className="tag-container">
                 <p className="tag">sold out</p>
             </div>
@@ -13,14 +12,14 @@ function Card() {
             <div className="info">
                 <div className="rating">
                     <img src={star} alt="" />
-                    <p id="score">5.0</p>
-                    <p>(6)</p>
+                    <p id="score">{props.rating}</p>
+                    <p>{props.reviewCount}</p>
                     <p>&#x2022;</p>
-                    <p>USA</p>
+                    <p>{props.country}</p>
                 </div>
-                <p className="description">Life lessons with Katie Zaferes</p>
+                <p className="description">{props.title}</p>
                 <div className="price">
-                    <p id="semibold">From $136</p>
+                    <p id="semibold">From ${props.price}</p>
                     <p>/ person</p>
                 </div>
             </div>
