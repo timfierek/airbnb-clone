@@ -4,9 +4,9 @@ function Card(props: any) {
     return (
         <div className="card">
             <img src={props.img} alt="" className="picture" />
-            <div className="tag-container">
+            {props.openSpots === 0 && <div className="tag-container">
                 <p className="tag">sold out</p>
-            </div>
+            </div>}
 
             <div className="info">
                 <div className="rating">
