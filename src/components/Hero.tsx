@@ -1,11 +1,10 @@
 import React from "react";
-import imageCollage from "../images/image-collage.png";
 
 function Hero() {
     return(
         <div className="hero">
             <div className="image-container">
-                <img src={imageCollage} alt="" id="image-collage"/>
+                <img src="/images/image-collage.png" alt="" id="image-collage"/>
             </div>
 
             <div className="hero-content">

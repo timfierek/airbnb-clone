@@ -1,5 +1,4 @@
 import React from "react";
-import star from "../images/star.png";
 
 function Card(props: any) {
     return (
@@ -11,11 +10,11 @@ function Card(props: any) {
 
             <div className="info">
                 <div className="rating">
-                    <img src={star} alt="" />
+                    <img src="/images/star.png" alt="" />
                     <p id="score">{props.rating}</p>
                     <p>{props.reviewCount}</p>
                     <p>&#x2022;</p>
-                    <p>{props.country}</p>
+                    <p>{props.location}</p>
                 </div>
                 <p className="description">{props.title}</p>
                 <div className="price">

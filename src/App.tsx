@@ -1,26 +1,33 @@
 import React from 'react';
+import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Card from './components/Card';
-import katieZaferes from "./images/katie-zaferes.png";
-
-import './App.css';
+import data from './data';
 
 function App() {
+  const cards = data.map((event) => {
+    return <Card 
+        title={event.title}
+        description={event.description}
+        price={event.price}
+        img={"/images/" + event.coverImg}
+        rating={event.stats.rating}
+        reviewCount={event.stats.reviewCount}
+        location={event.location}
+      />
+  });
+
   return (
     <div>
       <Navbar />
       <Hero />
-      <Card 
-        img={katieZaferes}
-        rating="5.0"
-        reviewCount={6}
-        country="USA"
-        title="Life Lessons with Katie Zaferes"
-        price={136}
-      />
+      <div className="cards">
+        {cards}
+      </div>
     </div>
   );
 }
+
 
 export default App;
